@@ -1,0 +1,23 @@
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<ul id='ul'></ul>
+<script>
+var today = new Date();
+var month = today.getMonth();
+var array=['January', 'February', 'March', 'April', 'May', 'June', 'August', 'September', 'October', 'November', 'December'];
+for (var i=0; i<array.length; i++){
+ var li = document.createElement('li');
+ if (i==parseInt(month)){
+  li.innerHTML = '<b>'+array[i]+'</b>';
+ } else {
+  li.innerHTML = array[i];
+ }
+ document.getElementById('ul').appendChild(li);
+}
+document.getElementsByTagName('b')[0].style.color="red";
+</script>
+</body>
+</html>
